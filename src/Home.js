@@ -17,7 +17,7 @@ function Home() {
           Django back-end for item information and set an Array..or Map(?) that
           creates a component for each item in the object query instead of
           calling 5 Product Components..
-          
+
       */}
       <div className="home__row">
         <Product
