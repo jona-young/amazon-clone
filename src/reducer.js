@@ -2,24 +2,7 @@ import Product from "./Product";
 import React from "react";
 
 export const initialState = {
-  basket: [
-    {
-      id: "234662626",
-      title: "The Legend of Zelda: Links Awakening",
-      price: 79.99,
-      rating: 3,
-      image:
-        "https://images-na.ssl-images-amazon.com/images/I/91BI4LT1iSL._AC_SY550_.jpg",
-    },
-    {
-      id: "234662626",
-      title: "The Legend of Zelda: Links Awakening",
-      price: 79.99,
-      rating: 3,
-      image:
-        "https://images-na.ssl-images-amazon.com/images/I/91BI4LT1iSL._AC_SY550_.jpg",
-    },
-  ],
+  basket: [],
   user: null,
 };
 
@@ -30,6 +13,11 @@ const reducer = (state, action) => {
   console.log(action);
 
   switch (action.type) {
+    case "SET_USER":
+      return {
+        ...state,
+        user: action.user,
+      };
     case "ADD_TO_BASKET":
       // Adding to basket
       return {
